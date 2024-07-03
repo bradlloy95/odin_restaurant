@@ -1,3 +1,42 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
 #content {
     color: red;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    height: 50px;
+    border: solid blue 1px;
+}
+
+button {
+    height: fit-content;
+    background-color: rgb(18, 18, 187);
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    padding: 5px 10px;
+  
+}
+
+button:hover, .clickedBTN {
+    background-color: blue;
+    
+}
+
+
+.homeDiv {
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
