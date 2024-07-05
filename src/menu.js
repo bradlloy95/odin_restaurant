@@ -96,6 +96,7 @@ function createMenuDiv() {
             menuContent.innerHTML = ''
            const itemDiv = createMenuItem(menu[arrayIndex])
            menuContent.appendChild(itemDiv);
+
             
            
             setActiveButton(button, 'menuBTNClicked', '.menuNav')                        
@@ -105,8 +106,13 @@ function createMenuDiv() {
     });
     
     //set default
-    const itemDiv = createMenuItem(menu[0])
+    
+    const itemDiv = createMenuItem(menu[0]);
     menuContent.appendChild(itemDiv);
+
+    
+                 
+
 
     menuDiv.appendChild(menuNav);
     menuDiv.appendChild(menuContent)

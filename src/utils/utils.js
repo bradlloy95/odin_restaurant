@@ -6,7 +6,6 @@ export function createElementWithText(tag, text) {
 
 export function setActiveButton(button, Class, currentTag) {
     const buttons = document.querySelectorAll(`${currentTag} button`);
-    console.log(buttons)
     buttons.forEach(btn => btn.classList.remove(Class));
     
     button.classList.add(Class);
