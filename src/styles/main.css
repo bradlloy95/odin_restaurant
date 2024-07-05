@@ -4,8 +4,14 @@
     font-family: sans-serif;
 }
 
+
 #content {
-    color: red;
+    color: rgb(255, 255, 255);
+    min-height: 100vh;
+    background: url('../images/background.jpeg');
+    display: flex;
+    flex-direction: column;
+   
 }
 
 nav {
@@ -29,14 +35,28 @@ button {
 
 button:hover, .clickedBTN {
     background-color: blue;
+
     
 }
 
 
-.homeDiv {
+.contentDiv {
     display: flex;
 
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+footer {
+    height: 20px;
+    width: 100vw;
+    align-self: center;
+    justify-content: end;
+    padding: 5px 0;
+    background-color: rgba(0, 0, 0, 0.267);
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
 }
