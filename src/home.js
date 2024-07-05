@@ -7,8 +7,8 @@ export function loadHome() {
     const homeDiv = createHomeDiv();
     content.appendChild(homeDiv);
 
-    const homeBTN = document.getElementById('homeBTN');
-    setActiveButton(homeBTN);
+    const homeBTN = document.getElementById('homeBTN', );
+    setActiveButton(homeBTN, 'clickedBTN', 'nav');
 
     const footer =  createElementWithText('footer', 'Copyright © 2024 bradlloy95');
     content.appendChild(footer)
@@ -47,7 +47,7 @@ function createHomeDiv() {
 
     reviewDiv.innerHTML = `
         <h2>Customer reviews</h2>
-        <br>
+        <br> 
         <h3>Emma Thompson:</h3>
         <br>
         <br>

@@ -4,8 +4,16 @@ export function createElementWithText(tag, text) {
     return element;
 }
 
-export function setActiveButton(button) {
-    const buttons = document.querySelectorAll('nav button');
-    buttons.forEach(btn => btn.classList.remove('clickedBTN'));
-    button.classList.add('clickedBTN');
+export function setActiveButton(button, Class, currentTag) {
+    const buttons = document.querySelectorAll(`${currentTag} button`);
+    console.log(buttons)
+    buttons.forEach(btn => btn.classList.remove(Class));
+    
+    button.classList.add(Class);
+}
+
+export function createElementWithClass(tag, Class) {
+    const element = document.createElement(tag);
+    element.classList.add(Class);
+    return element
 }

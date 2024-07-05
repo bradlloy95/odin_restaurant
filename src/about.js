@@ -9,7 +9,7 @@ export function loadAbout(){
     content.appendChild(aboutDiv);
 
     const aboutBTN = document.getElementById('aboutBTN');
-    setActiveButton(aboutBTN);
+    setActiveButton(aboutBTN, 'clickedBTN', 'nav');
 
     const footer =  createElementWithText('footer', 'Copyright © 2024 bradlloy95');
     content.appendChild(footer)

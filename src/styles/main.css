@@ -3,9 +3,17 @@
     margin: 0;
     font-family: sans-serif;
 }
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Hide horizontal overflow */
+    width: 100vw;
+    box-sizing: border-box;
+}
 
 :root {
-    --dark-seeThrough: rgba(0, 0, 0, 0.33);
+    --dark-seeThrough: rgba(0, 0, 0, 0.5);
+    
 }
 
 body {
@@ -17,9 +25,13 @@ body {
 #content {
     color: rgb(255, 255, 255);
     min-height: 100vh;
+    width: 100vw;
     
     display: flex;
     flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    justify-content: center;
     
    
 }
@@ -28,7 +40,7 @@ header {
     display: flex;
     justify-content: space-between;
     background-color: var(--dark-seeThrough);
-    padding: 10px 15px;
+    padding: 10px 25px;
 }
 
 .logo {
@@ -45,9 +57,10 @@ nav {
     align-items: center;
     gap: 15px;
     height: 50px;
+    
 }
 
-button {
+header button {
     height: fit-content;
     background-color: rgb(18, 18, 187);
     color: white;
@@ -65,8 +78,7 @@ button:hover, .clickedBTN {
 
 .homeDiv {
     display: flex;
-
-    
+    justify-content: space-around;    
 }
 
 .homeText {
@@ -79,7 +91,7 @@ button:hover, .clickedBTN {
 }
 
 .reviews {
-    width: calc(95vw - 700px - 100px);
+    width: 300px;
     background-color: var(--dark-seeThrough);
     height: fit-content;
     padding:  10px 30px;
@@ -87,6 +99,50 @@ button:hover, .clickedBTN {
 }
 
 
+
+.menuDiv {
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    width: 95%;
+    margin: 0 50px;
+}
+
+.menuNav {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 equal columns */
+    height: 30px;
+
+    button {
+        background-color: var(--dark-seeThrough);
+        flex: 1;
+        color: white;
+        border: 0;
+    }
+
+    .menuBTNClicked {
+    background-color: black;
+    border-bottom: 3px solid white;
+
+    }
+    
+}
+
+.menuNav button:hover {
+    background-color: black;
+    border-bottom: 3px solid white;
+}
+
+
+
+
+.menuContent {
+    color: white;
+    background-color: var(--dark-seeThrough);
+    border: 3px solid black;
+    padding: 10px;
+}
 
 footer {
     height: 20px;
