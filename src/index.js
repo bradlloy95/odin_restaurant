@@ -1,6 +1,7 @@
 import { loadHome } from "./home";
 import { loadMenu } from "./menu";
 import { loadAbout } from "./about";
+import { createElementWithText } from "./utils/utils";
 
 import './styles/main.css'
 //import './images/restaurant.jpeg'
@@ -14,14 +15,17 @@ function init() {
 
 function clearContent() {
     header.innerHTML = '';
-    createNav();
-    
-    content.innerHTML = '';
-    
+    createNav();    
+    content.innerHTML = '';    
 }
 
 function createNav() {
     const nav = document.createElement('nav');
+
+    const title = document.createElement('h1')
+    title.textContent = 'The Olde Hearth'
+    title.classList.add('logo')
+    header.appendChild(title)
 
     const buttons = [
         { text: 'Home', id: 'homeBTN', loadFunction: loadHome },
@@ -40,7 +44,12 @@ function createNav() {
         nav.appendChild(button);
     });
 
+    
     header.appendChild(nav);
+
+    const spacer = document.createElement('div');
+    spacer.classList.add('logo');
+    header.appendChild(spacer)
 }
 
 document.addEventListener('DOMContentLoaded', () => {

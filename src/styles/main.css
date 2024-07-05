@@ -4,14 +4,39 @@
     font-family: sans-serif;
 }
 
+:root {
+    --dark-seeThrough: rgba(0, 0, 0, 0.33);
+}
+
+body {
+    background: url('../images/background.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 #content {
     color: rgb(255, 255, 255);
     min-height: 100vh;
-    background: url('../images/background.jpeg');
+    
     display: flex;
     flex-direction: column;
+    
    
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--dark-seeThrough);
+    padding: 10px 15px;
+}
+
+.logo {
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
 
 nav {
@@ -20,7 +45,6 @@ nav {
     align-items: center;
     gap: 15px;
     height: 50px;
-    border: solid blue 1px;
 }
 
 button {
@@ -39,14 +63,30 @@ button:hover, .clickedBTN {
     
 }
 
-
-.contentDiv {
+.homeDiv {
     display: flex;
 
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    
 }
+
+.homeText {
+    color: white;
+    background-color: var(--dark-seeThrough);
+    padding: 20px 25px;
+    width: 700px;
+    margin: 10px 45px;
+
+}
+
+.reviews {
+    width: calc(95vw - 700px - 100px);
+    background-color: var(--dark-seeThrough);
+    height: fit-content;
+    padding:  10px 30px;
+    margin: 10px 45px;
+}
+
+
 
 footer {
     height: 20px;
@@ -54,7 +94,7 @@ footer {
     align-self: center;
     justify-content: end;
     padding: 5px 0;
-    background-color: rgba(0, 0, 0, 0.267);
+    background-color: var(--dark-seeThrough);
     color: white;
     display: flex;
     justify-content: center;
