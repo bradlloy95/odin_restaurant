@@ -20,7 +20,7 @@ function createAboutDiv() {
     homeDiv.classList.add('contentDiv');
 
     const homeTitle = createElementWithText('h1', 'About');
-    const homeText = createElementWithText('p', 'About my restaurant');
+    const homeText = createElementWithText('p', 'About my restaurant, not sure what else to write so i am going to waffle on abit.');
 
     homeDiv.appendChild(homeTitle);
     homeDiv.appendChild(homeText);
