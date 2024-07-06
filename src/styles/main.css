@@ -123,14 +123,14 @@ header button:hover {
     }
 
     .homeText {
-        width: 90%; /* Full width on smaller screens */
+        width: 75%; /* Full width on smaller screens */
         margin: 10px 0; /* Adjust margin for spacing */
         height: 50vh; /* Adjust height as needed */
     }
 
     .reviews {
-        width: 90%; /* Full width on smaller screens */
-        margin-left: 0; /* Remove margin between items */
+        width: 75%; /* Full width on smaller screens */
+        margin: 10px 0; /* Adjust margin for spacing */
         height: 50vh; /* Adjust height as needed */
     }
 }
