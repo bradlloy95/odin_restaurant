@@ -113,6 +113,10 @@ header button:hover {
   }
 
 @media (max-width: 768px) {
+    .logo {
+        font-size: 13px;
+    }
+    
     .homeDiv {
         flex-direction: column; /* Stack items vertically on smaller screens */
         align-items: center; /* Center items horizontally */
