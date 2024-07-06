@@ -81,9 +81,10 @@ header button:hover {
     background-color: gray;
 }
 
-.homeDiv  {
+.homeDiv {
     display: flex;
     justify-content: space-around;
+    align-items: flex-start; /* Align items to the top */
     height: 90%;
 }
 
@@ -91,28 +92,44 @@ header button:hover {
     color: white;
     background-color: var(--dark-seeThrough);
     padding: 20px 25px;
-    width: 700px;
-    margin: 10px 45px;
+    width: 50%;
     height: 90%;
-    overflow-y: scroll;
-    }
-
-    .homeText::-webkit-scrollbar {
-        display: none;
-      }
+    overflow-y: auto; /* Use auto for scroll only when necessary */
+}
+.homeText::-webkit-scrollbar {
+    display: none;
+  }
 
 .reviews {
-    width: 300px;
+    width: 30%;
     background-color: var(--dark-seeThrough);
     height: 70vh;
-    overflow-y: scroll;
-    padding:  10px 30px;
-    margin: 10px 45px;
+    overflow-y: auto; /* Use auto for scroll only when necessary */
+    padding: 10px 30px;
+    margin-left: 10px; /* Add margin for spacing between homeText and reviews */
 }
-
 .reviews::-webkit-scrollbar {
     display: none;
   }
+
+@media (max-width: 768px) {
+    .homeDiv {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .homeText {
+        width: 90%; /* Full width on smaller screens */
+        margin: 10px 0; /* Adjust margin for spacing */
+        height: 50vh; /* Adjust height as needed */
+    }
+
+    .reviews {
+        width: 90%; /* Full width on smaller screens */
+        margin-left: 0; /* Remove margin between items */
+        height: 50vh; /* Adjust height as needed */
+    }
+}
 
 .menuDiv {
     display: flex;
