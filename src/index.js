@@ -7,25 +7,28 @@ import './styles/main.css'
 //import './images/restaurant.jpeg'
 const content = document.getElementById('content');
 const header = document.getElementById('header');
+const body = document.getElementById('body');
 
 function init() {
     clearContent();
     loadHome();
+    createFooter();
 }
 
 function clearContent() {
     header.innerHTML = '';
     createNav();    
-    content.innerHTML = '';    
+    content.innerHTML = '';   
+    removeFooter(); // Add this line to remove footer
 }
 
 function createNav() {
     const nav = document.createElement('nav');
 
-    const title = document.createElement('h1')
-    title.textContent = 'The Olde Hearth'
-    title.classList.add('logo')
-    header.appendChild(title)
+    const title = document.createElement('h1');
+    title.textContent = 'The Olde Hearth';
+    title.classList.add('logo');
+    header.appendChild(title);
 
     const buttons = [
         { text: 'Home', id: 'homeBTN', loadFunction: loadHome },
@@ -40,16 +43,16 @@ function createNav() {
         button.addEventListener('click', () => {
             clearContent();
             loadFunction();
+            createFooter();
         });
         nav.appendChild(button);
     });
 
-    
     header.appendChild(nav);
 
     const spacer = document.createElement('div');
     spacer.classList.add('logo');
-    header.appendChild(spacer)
+    header.appendChild(spacer);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -59,6 +62,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function createFooter() {
     const footer = document.createElement('footer');
-    footer.textContent = 'Copyright © 2024 bradlloy95'
-    content.appendChild(footer)
+    footer.textContent = 'Copyright © 2024 bradlloy95';
+    body.appendChild(footer);
+}
+
+function removeFooter() {
+    const footer = document.querySelector('footer');
+    if (footer) {
+        footer.remove();
+    }
 }

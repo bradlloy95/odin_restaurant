@@ -10,8 +10,8 @@ export function loadHome() {
     const homeBTN = document.getElementById('homeBTN', );
     setActiveButton(homeBTN, 'clickedBTN', 'nav');
 
-    const footer =  createElementWithText('footer', 'Copyright © 2024 bradlloy95');
-    content.appendChild(footer)
+    // const footer =  createElementWithText('footer', 'Copyright © 2024 bradlloy95');
+    // content.appendChild(footer)
 
 
 }

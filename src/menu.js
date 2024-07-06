@@ -35,7 +35,7 @@ const menu = [
 ];
 
 const buttons = [
-    { text: 'Starters', id: 'StartersBTN', arrayIndex: 0 },
+    { text: 'Starters', id: 'menuBTNClicked', arrayIndex: 0 },
     { text: 'Mains', id: 'mainsBTN', arrayIndex: 1},
     { text: 'Sides', id: 'sidesBTN', arrayIndex: 2},
     { text: 'Desserts', id: 'dessertsBTN', arrayIndex: 3},
@@ -72,8 +72,8 @@ export function loadMenu(){
     const menuBTN = document.getElementById('menuBTN');
     setActiveButton(menuBTN, 'clickedBTN', 'nav');
 
-    const footer =  createElementWithText('footer', 'Copyright © 2024 bradlloy95');
-    content.appendChild(footer)
+    // const footer =  createElementWithText('footer', 'Copyright © 2024 bradlloy95');
+    // content.appendChild(footer)
 }
 
 
@@ -108,14 +108,14 @@ function createMenuDiv() {
     //set default
     
     const itemDiv = createMenuItem(menu[0]);
-    menuContent.appendChild(itemDiv);
-
+    menuContent.appendChild(itemDiv);    
     
-                 
-
+    const BTNS = document.querySelectorAll('button')
+    console.log(BTNS)
 
     menuDiv.appendChild(menuNav);
     menuDiv.appendChild(menuContent)
 
     return menuDiv;
 }
+
