@@ -78,7 +78,7 @@ header button:hover, .clickedBTN {
 }
 
 header button:hover {
-    background-color: gray;
+    background-color: rgb(0, 0, 0);
 }
 
 .homeDiv {

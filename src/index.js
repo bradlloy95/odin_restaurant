@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function createFooter() {
     const footer = document.createElement('footer');
     footer.textContent = 'Copyright © 2024 bradlloy95';
-    body.appendChild(footer);
+    document.body.appendChild(footer);
 }
 
 function removeFooter() {
